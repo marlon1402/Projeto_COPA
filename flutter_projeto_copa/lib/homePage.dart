@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -81,7 +84,11 @@ class _HomePageState extends State<HomePage> {
               width: 150,
               height: 50,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  SystemNavigator.pop(); // para android
+                  exit(0); // para iphone
+
+                },
                 child: Text(
                   "Sair",
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
