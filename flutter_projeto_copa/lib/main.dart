@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       routes: {
-        '/':(context) => HomePage(),
-        'creditos':(context) => creditos(),
+        '/': (context) => HomePage(),
+        'creditos': (context) => creditos(),
       },
     );
   }
