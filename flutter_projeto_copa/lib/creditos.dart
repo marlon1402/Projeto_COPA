@@ -1,15 +1,18 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class creditos extends StatefulWidget {
-  const creditos({super.key});
+class Creditos extends StatefulWidget {
+  const Creditos({super.key});
 
   @override
-  State<creditos> createState() => _creditosState();
+  State<Creditos> createState() => _CreditosState();
 }
 
-class _creditosState extends State<creditos> {
+class _CreditosState extends State<Creditos> {
+  int _currentIndex = 0; // Índice da imagem atual
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,63 +39,92 @@ class _creditosState extends State<creditos> {
           )
         ),
       ),
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        color: Color.fromARGB(255, 25, 7, 63),
-        child: Stack(
-          children: [
-            Center(
-              child: Padding(
-                padding: EdgeInsets.only(
-                  top: 80,
-                  bottom: 20,
-                  left: 25,
-                  right: 25,
-                ),
-                child: Container(
-                  padding: EdgeInsets.all(20),
-                width: double.infinity,
-                height: double.infinity,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 140, 82, 255),
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                child: Column(
-                  children: [
-                    Positioned(
-                      top: 120,
-                      left: 0,
-                      right: 0,
-                      child: Align(
-                        alignment: Alignment.topCenter,
-                        child: Container(
-                          width: 150,
-                          height: 150,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 20,),
-                    Text(
-                      'TEXTO GIGANTESCO PARA TESTES DE TAMANHO E SE O PADDING ESTA REALMENTE BOM, POR ISSO ELE É GRANDE DESSE JEITO, MAS NÃO SEI POR QUE EU ESCREVI ELE EM CAPSLOCK MAS EU JA COMECEI E NÃO QUERO TROCAR.',
-                      style: TextStyle(
-                      color: Colors.white, // Cor do texto
-                      fontSize: 20, // Tamanho do texto
-                      fontWeight: FontWeight.bold, // Peso do texto
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
+      body: Stack(
+        children: [
+          Container(
+            color: Color.fromARGB(255, 25, 7, 63), // Fundo do Scaffold
+          ),
+          Column(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: ImageCarousel(
+                    onPageChanged: (index) {
+                      setState(() {
+                        _currentIndex = index;
+                      });
+                    },
+                  ),
                 ),
               ),
+              _buildIndicator(), // Adiciona o widget de indicadores abaixo do carrossel
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildIndicator() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 16.0), // Espaçamento vertical do indicador
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: List.generate(
+          3, // O número de indicadores deve corresponder ao número de imagens
+          (index) => Container(
+            margin: EdgeInsets.symmetric(horizontal: 4.0),
+            width: 8.0,
+            height: 8.0,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: _currentIndex == index
+                  ? Color.fromARGB(255, 140, 82, 255)
+                  : Colors.grey, // Cor dos indicadores
             ),
           ),
-          ],
         ),
+      ),
+    );
+  }
+}
+
+class ImageCarousel extends StatelessWidget {
+  final List<String> imgList = [
+    'assets/images/Creditos_Marlon.png',
+    'assets/images/Creditos_Kaue.png',
+    'assets/images/Creditos_Dudu.png',
+  ];
+
+  final ValueChanged<int> onPageChanged; // Callback para quando a página muda
+
+  ImageCarousel({super.key, required this.onPageChanged});
+
+  @override
+  Widget build(BuildContext context) {
+    return CarouselSlider.builder(
+      itemCount: imgList.length,
+      itemBuilder: (context, index, realIndex) {
+        final imgUrl = imgList[index];
+        return Container(
+          margin: EdgeInsets.symmetric(horizontal: 8.0),
+          child: Image.asset(
+            imgUrl,
+            fit: BoxFit.cover,
+          ),
+        );
+      },
+      options: CarouselOptions(
+        height: double.infinity, // Usa altura infinita para ocupar espaço disponível
+        autoPlay: true,
+        enlargeCenterPage: true,
+        viewportFraction: 1.0,
+        aspectRatio: 16/9,
+        initialPage: 0,
+        onPageChanged: (index, reason) {
+          onPageChanged(index); // Notifica o índice da página atual
+        },
       ),
     );
   }

@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (context) => HomePage(),
-        'creditos': (context) => creditos(),
+        'creditos': (context) => Creditos(),
       },
     );
   }
