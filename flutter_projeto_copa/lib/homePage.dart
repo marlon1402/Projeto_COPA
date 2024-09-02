@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'dart:io';
 
@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
               width: 250,
               height: 250,
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(30),
                 child: Image.asset(
                   "assets/images/imagenzinha.png",
                   fit: BoxFit.cover,
@@ -40,20 +40,28 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(
-              height: 50,
+              height: 70,
             ),
             SizedBox(
-              width: 150,
+              width: 200,
               height: 50,
               child: ElevatedButton(
                 onPressed: () {},
                 child: Text(
                   "Iniciar",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: 20, 
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.bold
+                  ),
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromARGB(255, 140, 82, 255),
                   foregroundColor: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  )
                 ),
               ),
             ),
@@ -61,7 +69,7 @@ class _HomePageState extends State<HomePage> {
               height: 20,
             ),
             SizedBox(
-              width: 150,
+              width: 200,
               height: 50,
               child: ElevatedButton(
                 onPressed: () {
@@ -69,11 +77,19 @@ class _HomePageState extends State<HomePage> {
                 },
                 child: Text(
                   "Créditos",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: 20, 
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.bold
+                  ),
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromARGB(255, 140, 82, 255),
                   foregroundColor: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  )
                 ),
               ),
             ),
@@ -81,7 +97,7 @@ class _HomePageState extends State<HomePage> {
               height: 20,
             ),
             SizedBox(
-              width: 150,
+              width: 200,
               height: 50,
               child: ElevatedButton(
                 onPressed: () {
@@ -91,11 +107,19 @@ class _HomePageState extends State<HomePage> {
                 },
                 child: Text(
                   "Sair",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: 20, 
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.bold
+                  ),
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromARGB(255, 140, 82, 255),
                   foregroundColor: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  )
                 ),
               ),
             ),
