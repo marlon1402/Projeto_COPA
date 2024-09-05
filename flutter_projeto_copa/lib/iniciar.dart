@@ -9,39 +9,53 @@ class Myiniciar extends StatefulWidget {
 }
 
 class _MyiniciarState extends State<Myiniciar> {
-    // ignore: unused_field
-    int _currentIndex = 0; // Índice da imagem atual
+  int _currentIndex = 0; // Índice da imagem atual
+
+  void _handleImageTap(int index) {
+    // Adicione a lógica específica para cada imagem
+    switch (index) {
+      case 0:
+        Navigator.pushNamed(context, 'textoPrimeiro');
+        break;
+      case 1:
+        Navigator.pushNamed(context, 'textoSegundo');
+        break;
+      case 2:
+        Navigator.pushNamed(context, 'textoTerceiro');
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      // ignore: prefer_const_literals_to_create_immutables
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("ANOS LETIVOS", 
-        style: TextStyle(color: Colors.white,
-        fontFamily: 'Inter',
-        fontSize: 20,
-        fontWeight: FontWeight.bold
+        title: const Text(
+          "ANOS LETIVOS",
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Inter',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
         ),
-      ),
-     backgroundColor: Color.fromARGB(255, 140, 82, 255),
+        backgroundColor: const Color.fromARGB(255, 140, 82, 255),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
-          }, 
-            // ignore: prefer_const_constructors
-            icon: Icon(
+          },
+          icon: const Icon(
             Icons.arrow_back,
             color: Colors.white,
             size: 30,
-          )
+          ),
         ),
       ),
       body: Stack(
         children: [
           Container(
-            color: Color.fromARGB(255, 248, 248, 248), // Fundo do Scaffold
+            color: const Color.fromARGB(255, 25, 7, 63), // Fundo do Scaffold
           ),
           Column(
             children: [
@@ -54,6 +68,11 @@ class _MyiniciarState extends State<Myiniciar> {
                         _currentIndex = index;
                       });
                     },
+                    onImageTaps: [
+                      () => _handleImageTap(0), // Callback para a primeira imagem
+                      () => _handleImageTap(1), // Callback para a segunda imagem
+                      () => _handleImageTap(2), // Callback para a terceira imagem
+                    ],
                   ),
                 ),
               ),
@@ -64,9 +83,8 @@ class _MyiniciarState extends State<Myiniciar> {
       ),
     );
   }
-}
-Widget _buildIndicator() {
-    var _currentIndex;
+
+  Widget _buildIndicator() {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 16.0), // Espaçamento vertical do indicador
       child: Row(
@@ -74,13 +92,13 @@ Widget _buildIndicator() {
         children: List.generate(
           3, // O número de indicadores deve corresponder ao número de imagens
           (index) => Container(
-            margin: EdgeInsets.symmetric(horizontal: 4.0),
+            margin: const EdgeInsets.symmetric(horizontal: 4.0),
             width: 8.0,
             height: 8.0,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: _currentIndex == index
-                  ? Color.fromARGB(255, 140, 82, 255)
+                  ? const Color.fromARGB(255, 140, 82, 255)
                   : Colors.grey, // Cor dos indicadores
             ),
           ),
@@ -88,7 +106,7 @@ Widget _buildIndicator() {
       ),
     );
   }
-
+}
 
 class ImageCarousel extends StatelessWidget {
   final List<String> imgList = [
@@ -98,8 +116,9 @@ class ImageCarousel extends StatelessWidget {
   ];
 
   final ValueChanged<int> onPageChanged; // Callback para quando a página muda
+  final List<VoidCallback> onImageTaps; // Lista de callbacks para cada imagem
 
-  ImageCarousel({super.key, required this.onPageChanged});
+  ImageCarousel({super.key, required this.onPageChanged, required this.onImageTaps});
 
   @override
   Widget build(BuildContext context) {
@@ -107,28 +126,29 @@ class ImageCarousel extends StatelessWidget {
       itemCount: imgList.length,
       itemBuilder: (context, index, realIndex) {
         final imgUrl = imgList[index];
-        return Container(
-          margin: EdgeInsets.symmetric(horizontal: 8.0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8.0), 
+        return GestureDetector(
+          onTap: onImageTaps[index], // Chama o callback específico para a imagem
+          child: Container(
+            margin: const EdgeInsets.symmetric(horizontal: 8.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8.0),
+              child: Image.asset(
+                imgUrl,
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(8.0), 
-            
-          child: Image.asset(
-            imgUrl,
-            fit: BoxFit.cover,
-          ),
-          )
         );
-        
       },
       options: CarouselOptions(
         height: double.infinity, // Usa altura infinita para ocupar espaço disponível
         autoPlay: true,
         enlargeCenterPage: true,
         viewportFraction: 1.0,
-        aspectRatio: 16/9,
+        aspectRatio: 16 / 9,
         initialPage: 0,
         onPageChanged: (index, reason) {
           onPageChanged(index); // Notifica o índice da página atual

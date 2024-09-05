@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_projeto_copa/creditos.dart';
+import 'package:flutter_projeto_copa/exercicios/primeiro/textoPrimeiro.dart';
+import 'package:flutter_projeto_copa/exercicios/segundo/textoSegundo.dart';
+import 'package:flutter_projeto_copa/exercicios/terceiro/textoTerceiro.dart';
 import 'package:flutter_projeto_copa/homePage.dart';
 import 'package:flutter_projeto_copa/iniciar.dart';
 
@@ -24,6 +27,9 @@ class MyApp extends StatelessWidget {
         '/': (context) => HomePage(),
         'creditos': (context) => Creditos(),
         'iniciar': (context) => Myiniciar(),
+        'textoPrimeiro': (context) => Textoprimeiro(),
+        'textoSegundo': (context) => Textosegundo(),
+        'textoTerceiro': (context) => Textoterceiro(),
 
       },
     );
