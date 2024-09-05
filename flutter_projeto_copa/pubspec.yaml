@@ -65,6 +65,9 @@ flutter:
     - assets/images/Creditos_Dudu.png
     - assets/images/Creditos_Kaue.png
     - assets/images/Creditos_Marlon.png
+    - assets/images/primeiro.png
+    - assets/images/segundo.png
+    - assets/images/terceiro.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

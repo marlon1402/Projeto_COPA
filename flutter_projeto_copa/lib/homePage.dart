@@ -46,7 +46,9 @@ class _HomePageState extends State<HomePage> {
               width: 200,
               height: 50,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, 'iniciar');
+                },
                 child: Text(
                   "Iniciar",
                   style: TextStyle(

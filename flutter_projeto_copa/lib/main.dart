@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projeto_copa/creditos.dart';
 import 'package:flutter_projeto_copa/homePage.dart';
+import 'package:flutter_projeto_copa/iniciar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +23,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomePage(),
         'creditos': (context) => Creditos(),
+        'iniciar': (context) => Myiniciar(),
+
       },
     );
   }
