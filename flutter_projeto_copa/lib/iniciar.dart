@@ -145,7 +145,6 @@ class ImageCarousel extends StatelessWidget {
       },
       options: CarouselOptions(
         height: double.infinity, // Usa altura infinita para ocupar espaço disponível
-        autoPlay: true,
         enlargeCenterPage: true,
         viewportFraction: 1.0,
         aspectRatio: 16 / 9,

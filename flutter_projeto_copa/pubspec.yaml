@@ -68,6 +68,14 @@ flutter:
     - assets/images/primeiro.png
     - assets/images/segundo.png
     - assets/images/terceiro.png
+    - assets/images/3ano/Materias_Arduino.png
+    - assets/images/3ano/Materias_Mobile.png
+    - assets/images/3ano/Materias_PI2.png
+    - assets/images/3ano/Materias_TTI.png
+    - assets/images/3ano/Mobile.png
+    - assets/images/3ano/PI2.png
+    - assets/images/3ano/TTI.png
+    - assets/images/3ano/Arduino.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
