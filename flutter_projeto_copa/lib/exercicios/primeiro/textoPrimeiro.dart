@@ -17,6 +17,7 @@ class _TextoprimeiroState extends State<Textoprimeiro> {
         title: Text("Primeiro"),
         backgroundColor: const Color.fromARGB(255, 140, 82, 255),
       ),
+      backgroundColor: const Color.fromARGB(255, 25, 7, 63),
     );
   }
 }
