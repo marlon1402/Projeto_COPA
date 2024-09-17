@@ -1,6 +1,11 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/BD/BD.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/Informatica/Info.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/LP/LP.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/SORC/SORC.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/Web1/Web1.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/PI/projetoi.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/desktop/desk.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/inova/inovacao.dart';
@@ -47,14 +52,18 @@ class MyApp extends StatelessWidget {
         'projeto2': (context) => ProjetoDoisText(),
 
         //segundo
-         'desk': (context) => Mydesk(),
-         'inova': (context) => Myinova(),
-         'java': (context) => Myjava(),
-         'pi': (context) => Myintegrador(),
-         'web2': (context) => MYweb2(), 
+        'desk': (context) => Mydesk(),
+        'inova': (context) => Myinova(),
+        'java': (context) => Myjava(),
+        'pi': (context) => Myintegrador(),
+        'web2': (context) => MYweb2(),
 
-
-       
+        //primeiro ano
+        'BD': (context) => BD(),
+        'Informatica': (context) => Informatica(),
+        'LP': (context) => LP(),
+        'SORC': (context) => SORC(),
+        'Web1': (context) => Web1(),
       },
     );
   }
