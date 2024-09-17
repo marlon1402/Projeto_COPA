@@ -76,6 +76,11 @@ flutter:
     - assets/images/3ano/PI2.png
     - assets/images/3ano/TTI.png
     - assets/images/3ano/Arduino.png
+    - assets/images/2ano/desktop.png
+    - assets/images/2ano/inova.png
+    - assets/images/2ano/java.png
+    - assets/images/2ano/pi.png
+    - assets/images/2ano/web2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

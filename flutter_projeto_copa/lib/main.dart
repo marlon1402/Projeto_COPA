@@ -1,6 +1,11 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_projeto_copa/anosLetivos/segundo/PI/projetoi.dart';
+import 'package:flutter_projeto_copa/anosLetivos/segundo/desktop/desk.dart';
+import 'package:flutter_projeto_copa/anosLetivos/segundo/inova/inovacao.dart';
+import 'package:flutter_projeto_copa/anosLetivos/segundo/java/multiplataforma.dart';
+import 'package:flutter_projeto_copa/anosLetivos/segundo/web2/web.dart';
 import 'package:flutter_projeto_copa/anosLetivos/terceiro/Arduino/Arduino.dart';
 import 'package:flutter_projeto_copa/creditos.dart';
 import 'package:flutter_projeto_copa/anosLetivos/primeiro/materiasPrimeiro.dart';
@@ -40,6 +45,16 @@ class MyApp extends StatelessWidget {
         'arduino': (context) => arduinoText(),
         'topicos': (context) => TopicosText(),
         'projeto2': (context) => ProjetoDoisText(),
+
+        //segundo
+         'desk': (context) => Mydesk(),
+         'inova': (context) => Myinova(),
+         'java': (context) => Myjava(),
+         'pi': (context) => Myintegrador(),
+         'web2': (context) => MYweb2(), 
+
+
+       
       },
     );
   }
