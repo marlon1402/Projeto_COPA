@@ -14,7 +14,7 @@ class _SORCState extends State<SORC> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          "Banco de Dados",
+          "Sistemas e Redes",
           style: TextStyle(
             color: Colors.white,
             fontFamily: 'Inter',

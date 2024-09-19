@@ -14,7 +14,7 @@ class _Web1State extends State<Web1> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          "Banco de Dados",
+          "Aplicação Web I",
           style: TextStyle(
             color: Colors.white,
             fontFamily: 'Inter',

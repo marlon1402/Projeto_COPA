@@ -14,7 +14,7 @@ class _InformaticaState extends State<Informatica> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          "Banco de Dados",
+          "Informática",
           style: TextStyle(
             color: Colors.white,
             fontFamily: 'Inter',

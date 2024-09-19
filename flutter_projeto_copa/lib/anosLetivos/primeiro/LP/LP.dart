@@ -14,7 +14,7 @@ class _LPState extends State<LP> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          "Banco de Dados",
+          "Lógica de Programação",
           style: TextStyle(
             color: Colors.white,
             fontFamily: 'Inter',
