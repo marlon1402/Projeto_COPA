@@ -17,7 +17,11 @@ import 'package:flutter_projeto_copa/anosLetivos/primeiro/Web1/quizW3.dart';
 import 'package:flutter_projeto_copa/anosLetivos/primeiro/Web1/quizw2.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/PI/projetoi.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/desktop/desk.dart';
+import 'package:flutter_projeto_copa/anosLetivos/segundo/desktop/quiz2des.dart';
+import 'package:flutter_projeto_copa/anosLetivos/segundo/desktop/quizdesk.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/inova/inovacao.dart';
+import 'package:flutter_projeto_copa/anosLetivos/segundo/java/exerciciosJava/quizJava1.dart';
+import 'package:flutter_projeto_copa/anosLetivos/segundo/java/exerciciosJava/quizJava2.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/java/multiplataforma.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/web2/web.dart';
 import 'package:flutter_projeto_copa/anosLetivos/terceiro/Arduino/Arduino.dart';
@@ -80,7 +84,11 @@ class MyApp extends StatelessWidget {
         'inova': (context) => Myinova(),
         'java': (context) => Myjava(),
         'pi': (context) => Myintegrador(),
-        'web2': (context) => MYweb2(),
+        'Myquiz2': (context) => Myquiz2(),
+        'Quides1': (context) => Quides1(),
+        'QuizJava1': (context) => Quizjava1(),
+        'QuizJava2': (context) => Quizjava2(),
+        
 
         //terceiro ano
         'textoTerceiro': (context) => Textoterceiro(),

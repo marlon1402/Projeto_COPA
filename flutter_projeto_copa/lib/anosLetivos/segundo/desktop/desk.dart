@@ -40,10 +40,11 @@ class Mydesk extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
+                Navigator.pushNamed(context, 'Quides1');
                 
               },
               child: Image.asset(
-              '',
+              'assets/images/2ano/MDesk.png',
               width: 270,
             )
             ),

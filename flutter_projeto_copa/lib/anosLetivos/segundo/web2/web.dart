@@ -43,7 +43,7 @@ class MYweb2 extends StatelessWidget {
                 
               },
               child: Image.asset(
-              '',
+              'assets/images/2ano/Mweb.png',
               width: 270,
             )
             ),

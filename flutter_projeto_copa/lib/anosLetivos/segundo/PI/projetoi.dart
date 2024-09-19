@@ -43,7 +43,7 @@ class Myintegrador extends StatelessWidget {
                 
               },
               child: Image.asset(
-              '',
+              'assets/images/2ano/Mpi.png',
               width: 270,
             )
             ),

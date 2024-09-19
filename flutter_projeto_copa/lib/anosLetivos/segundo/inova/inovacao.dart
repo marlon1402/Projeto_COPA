@@ -43,7 +43,7 @@ class Myinova extends StatelessWidget {
                 
               },
               child: Image.asset(
-              '',
+              'assets/images/2ano/Minova.png',
               width: 270,
             )
             ),

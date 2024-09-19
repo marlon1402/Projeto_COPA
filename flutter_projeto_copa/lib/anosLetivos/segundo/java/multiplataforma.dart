@@ -40,10 +40,10 @@ class Myjava extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                
+                Navigator.pushNamed(context, 'QuizJava1');
               },
               child: Image.asset(
-              '',
+              'assets/images/2ano/Mjava.png',
               width: 270,
             )
             ),

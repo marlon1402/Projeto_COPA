@@ -40,7 +40,7 @@ class _TextosegundoState extends State<Textosegundo> {
         color: const Color.fromARGB(255, 25, 7, 63),
         child: ListView(children: [
           SizedBox(
-            height: 30,
+            height: 10,
           ),
           GestureDetector(
             onTap: () {
@@ -48,11 +48,8 @@ class _TextosegundoState extends State<Textosegundo> {
             },
             child: Image.asset(
               'assets/images/2ano/inova.png',
-              width: 240,
+              width: 220,
             ),
-          ),
-          SizedBox(
-            height: 50,
           ),
           GestureDetector(
             onTap: () {
@@ -60,11 +57,8 @@ class _TextosegundoState extends State<Textosegundo> {
             },
             child: Image.asset(
               'assets/images/2ano/java.png',
-              width: 240,
+              width: 220,
             ),
-          ),
-          SizedBox(
-            height: 50,
           ),
           GestureDetector(
             onTap: () {
@@ -72,11 +66,8 @@ class _TextosegundoState extends State<Textosegundo> {
             },
             child: Image.asset(
               'assets/images/2ano/desktop.png',
-              width: 240,
+              width: 220,
             ),
-          ),
-          SizedBox(
-            height: 50,
           ),
           GestureDetector(
             onTap: () {
@@ -84,11 +75,8 @@ class _TextosegundoState extends State<Textosegundo> {
             },
             child: Image.asset(
               'assets/images/2ano/web2.png',
-              width: 240,
+              width: 220,
             ),
-          ),
-          SizedBox(
-            height: 50,
           ),
           GestureDetector(
             onTap: () {
@@ -98,9 +86,6 @@ class _TextosegundoState extends State<Textosegundo> {
               'assets/images/2ano/pi.png',
               width: 240,
             ),
-          ),
-          SizedBox(
-            height: 30,
           ),
         ]),
       ),
