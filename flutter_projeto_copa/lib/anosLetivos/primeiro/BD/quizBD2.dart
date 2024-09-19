@@ -33,157 +33,160 @@ class _QuizBD2State extends State<QuizBD2> {
             width: double.infinity,
           ),
           Center(
-            child: Container(
-              height: MediaQuery.of(context).size.height * 0.85,
-              width: MediaQuery.of(context).size.width * 0.90,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(height: 50.0),
-                  Text(
-                    "O que faz o seguinte comando SQL com JOIN e filtragem?",
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
-                    ),
-                    textAlign: TextAlign.center,
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.90,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                  SizedBox(
-                    height: 35,
-                  ),
-                  Text(
-                    "SELECT alunos.nome, cursos.nome \n" +
-                        "FROM alunos \n" +
-                        "JOIN cursos ON alunos.curso_id = cursos.id\n" +
-                        "WHERE cursos.nome = 'Desenvolvimento de Sistemas';",
-                    style: TextStyle(
-                      fontSize: 21.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  SizedBox(height: 50),
-                  SizedBox(
-                    width: 300,
-                    height: 45,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        checkresposta(0);
-                      },
-                      child: Text(
-                        "Deleta os alunos sem curso",
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 50.0),
+                      Text(
+                        "O que faz o seguinte comando SQL com \nJOIN e filtragem?",
                         style: TextStyle(
-                            fontSize: 13,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.bold),
+                          fontSize: 17.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor:
-                              const Color.fromARGB(255, 140, 82, 255),
-                          foregroundColor: Colors.white,
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 10),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15),
-                          )),
-                    ),
-                  ),
-                  SizedBox(height: 20.0),
-                  SizedBox(
-                    width: 300,
-                    height: 45,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        checkresposta(0);
-                      },
-                      child: Text(
-                        "Retorna os alunos matriculados em qualquer curso",
+                      SizedBox(height: 50),
+                      Text(
+                        "SELECT alunos.nome, cursos.nome \n" +
+                            "FROM alunos \n" +
+                            "JOIN cursos ON alunos.curso_id = cursos.id\n" +
+                            "WHERE cursos.nome = 'Desenvolvimento de Sistemas';",
                         style: TextStyle(
-                            fontSize: 12,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.bold),
+                          fontSize: 21.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor:
-                              const Color.fromARGB(255, 140, 82, 255),
-                          foregroundColor: Colors.white,
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 10),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15),
-                          )),
-                    ),
-                  ),
-                  SizedBox(height: 20.0),
-                  SizedBox(
-                    width: 300,
-                    height: 45,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        checkresposta(0);
-                      },
-                      child: Text(
-                        "Retorna os alunos e cursos, independentemente do curso",
+                      SizedBox(height: 50),
+                      SizedBox(
+                        width: 300,
+                        height: 70,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            checkresposta(0);
+                          },
+                          child: Text(
+                            "Deleta os alunos sem curso",
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.bold),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  const Color.fromARGB(255, 140, 82, 255),
+                              foregroundColor: Colors.white,
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 30, vertical: 10),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              )),
+                        ),
+                      ),
+                      SizedBox(height: 20.0),
+                      SizedBox(
+                        width: 300,
+                        height: 70,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            checkresposta(0);
+                          },
+                          child: Text(
+                            "Retorna os alunos matriculados em qualquer curso",
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.bold),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  const Color.fromARGB(255, 140, 82, 255),
+                              foregroundColor: Colors.white,
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 30, vertical: 10),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              )),
+                        ),
+                      ),
+                      SizedBox(height: 20.0),
+                      SizedBox(
+                        width: 300,
+                        height: 70,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            checkresposta(0);
+                          },
+                          child: Text(
+                            "Retorna os alunos e cursos, independentemente do curso",
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.bold),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  const Color.fromARGB(255, 140, 82, 255),
+                              foregroundColor: Colors.white,
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 30, vertical: 10),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              )),
+                        ),
+                      ),
+                      SizedBox(height: 20.0),
+                      SizedBox(
+                        width: 300,
+                        height: 70,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            checkresposta(1);
+                          },
+                          child: Text(
+                            "Retorna apenas os alunos matriculados no curso ''Desenvolvimento de Sistemas''",
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.bold),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  const Color.fromARGB(255, 140, 82, 255),
+                              foregroundColor: Colors.white,
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 30, vertical: 10),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              )),
+                        ),
+                      ),
+                      SizedBox(height: 20.0),
+                      Text(
+                        Mensagem,
                         style: TextStyle(
-                            fontSize: 12,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.bold),
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                          color: MCor,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor:
-                              const Color.fromARGB(255, 140, 82, 255),
-                          foregroundColor: Colors.white,
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 10),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15),
-                          )),
-                    ),
+                      SizedBox(height: 20),
+                    ],
                   ),
-                  SizedBox(height: 20.0),
-                  SizedBox(
-                    width: 300,
-                    height: 45,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        checkresposta(1);
-                      },
-                      child: Text(
-                        " Retorna apenas os alunos matriculados no curso ''Desenvolvimento de Sistemas''",
-                        style: TextStyle(
-                            fontSize: 11,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.bold),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor:
-                              const Color.fromARGB(255, 140, 82, 255),
-                          foregroundColor: Colors.white,
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 10),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15),
-                          )),
-                    ),
-                  ),
-                  SizedBox(height: 20.0),
-                  Text(
-                    Mensagem,
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                      color: MCor,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
+                ),
               ),
             ),
           ),
