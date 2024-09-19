@@ -25,7 +25,7 @@ class _TextoprimeiroState extends State<Textoprimeiro> {
         backgroundColor: const Color.fromARGB(255, 140, 82, 255),
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.pushNamed(context, 'iniciar');
           },
           icon: const Icon(
             Icons.arrow_back,

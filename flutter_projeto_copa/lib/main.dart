@@ -2,10 +2,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_projeto_copa/anosLetivos/primeiro/BD/BD.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/BD/quizBD1.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/BD/quizBD2.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/BD/quizBD3.dart';
 import 'package:flutter_projeto_copa/anosLetivos/primeiro/Informatica/Info.dart';
 import 'package:flutter_projeto_copa/anosLetivos/primeiro/LP/LP.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/LP/quizLP1.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/LP/quizLP2.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/LP/quizLP3.dart';
 import 'package:flutter_projeto_copa/anosLetivos/primeiro/SORC/SORC.dart';
 import 'package:flutter_projeto_copa/anosLetivos/primeiro/Web1/Web1.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/Web1/quizW1.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/Web1/quizW3.dart';
+import 'package:flutter_projeto_copa/anosLetivos/primeiro/Web1/quizw2.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/PI/projetoi.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/desktop/desk.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/inova/inovacao.dart';
@@ -64,6 +73,15 @@ class MyApp extends StatelessWidget {
         'LP': (context) => LP(),
         'SORC': (context) => SORC(),
         'Web1': (context) => Web1(),
+        'QuizBD1': (context) => QuizBD1(),
+        'QuizBD2': (context) => QuizBD2(),
+        'QuizBD3': (context) => QuizBD3(),
+        'QuizW1': (context) => QuizW1(),
+        'QuizW2': (context) => QuizW2(),
+        'QuizW3': (context) => QuizW3(),
+        'QuizLP1': (context) => QuizLP1(),
+        'QuizLP2': (context) => QuizLP2(),
+        'QuizLP3': (context) => QuizLP3(),
       },
     );
   }

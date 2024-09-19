@@ -44,7 +44,9 @@ class _Web1State extends State<Web1> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, 'QuizW1');
+              },
               child: Image.asset(
                 'assets/images/1ano/IntroWeb1.png',
                 width: 270,

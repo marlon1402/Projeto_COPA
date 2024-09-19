@@ -14,7 +14,7 @@ class _TextosegundoState extends State<Textosegundo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          centerTitle: true,
+        centerTitle: true,
         title: Text(
           "2° Ano Letivo",
           style: TextStyle(
@@ -27,7 +27,7 @@ class _TextosegundoState extends State<Textosegundo> {
         backgroundColor: const Color.fromARGB(255, 140, 82, 255),
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.pushNamed(context, 'iniciar');
           },
           icon: const Icon(
             Icons.arrow_back,
@@ -36,52 +36,74 @@ class _TextosegundoState extends State<Textosegundo> {
           ),
         ),
       ),
-       body: Container(
+      body: Container(
         color: const Color.fromARGB(255, 25, 7, 63),
-        child: ListView(
-          children:
-          [
-
-            SizedBox(height: 30,),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, 'inova');
-              },
-              child: Image.asset('assets/images/2ano/inova.png', width: 240,),
+        child: ListView(children: [
+          SizedBox(
+            height: 30,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, 'inova');
+            },
+            child: Image.asset(
+              'assets/images/2ano/inova.png',
+              width: 240,
             ),
-            SizedBox(height: 50,),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, 'java');
-              },
-              child: Image.asset('assets/images/2ano/java.png', width: 240,),
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, 'java');
+            },
+            child: Image.asset(
+              'assets/images/2ano/java.png',
+              width: 240,
             ),
-            SizedBox(height: 50,),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, 'desk');
-              },
-              child: Image.asset('assets/images/2ano/desktop.png', width: 240,),
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, 'desk');
+            },
+            child: Image.asset(
+              'assets/images/2ano/desktop.png',
+              width: 240,
             ),
-            SizedBox(height: 50,),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, 'web2');
-              },
-              child: Image.asset('assets/images/2ano/web2.png', width: 240,),
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, 'web2');
+            },
+            child: Image.asset(
+              'assets/images/2ano/web2.png',
+              width: 240,
             ),
-            SizedBox(height: 50,),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, 'pi');
-              },
-              child: Image.asset('assets/images/2ano/pi.png', width: 240,),
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, 'pi');
+            },
+            child: Image.asset(
+              'assets/images/2ano/pi.png',
+              width: 240,
             ),
-            SizedBox(height: 30,),
-
-          ]
-        ),
-       ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+        ]),
+      ),
     );
   }
 }

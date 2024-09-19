@@ -44,7 +44,9 @@ class _LPState extends State<LP> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, 'QuizLP1');
+              },
               child: Image.asset(
                 'assets/images/1ano/IntroLP.png',
                 width: 270,

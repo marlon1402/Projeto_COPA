@@ -91,6 +91,10 @@ flutter:
     - assets/images/1ano/IntroLP.png
     - assets/images/1ano/IntroSORC.png
     - assets/images/1ano/IntroWeb1.png
+    - assets/images/1ano/CodeWeb1.png
+    - assets/images/1ano/CodeLP1.png
+    - assets/images/1ano/CodeLP2.png
+    - assets/images/1ano/CodeLP3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

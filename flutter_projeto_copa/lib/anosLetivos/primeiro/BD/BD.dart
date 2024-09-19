@@ -44,7 +44,9 @@ class _BDState extends State<BD> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, 'QuizBD1');
+              },
               child: Image.asset(
                 'assets/images/1ano/IntroBD.png',
                 width: 270,

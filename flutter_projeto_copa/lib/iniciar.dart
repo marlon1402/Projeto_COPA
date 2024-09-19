@@ -43,7 +43,7 @@ class _MyiniciarState extends State<Myiniciar> {
         backgroundColor: const Color.fromARGB(255, 140, 82, 255),
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.pushNamed(context, '/');
           },
           icon: const Icon(
             Icons.arrow_back,
@@ -69,9 +69,12 @@ class _MyiniciarState extends State<Myiniciar> {
                       });
                     },
                     onImageTaps: [
-                      () => _handleImageTap(0), // Callback para a primeira imagem
-                      () => _handleImageTap(1), // Callback para a segunda imagem
-                      () => _handleImageTap(2), // Callback para a terceira imagem
+                      () =>
+                          _handleImageTap(0), // Callback para a primeira imagem
+                      () =>
+                          _handleImageTap(1), // Callback para a segunda imagem
+                      () =>
+                          _handleImageTap(2), // Callback para a terceira imagem
                     ],
                   ),
                 ),
@@ -86,7 +89,8 @@ class _MyiniciarState extends State<Myiniciar> {
 
   Widget _buildIndicator() {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16.0), // Espaçamento vertical do indicador
+      padding: const EdgeInsets.symmetric(
+          vertical: 16.0), // Espaçamento vertical do indicador
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(
@@ -118,7 +122,8 @@ class ImageCarousel extends StatelessWidget {
   final ValueChanged<int> onPageChanged; // Callback para quando a página muda
   final List<VoidCallback> onImageTaps; // Lista de callbacks para cada imagem
 
-  ImageCarousel({super.key, required this.onPageChanged, required this.onImageTaps});
+  ImageCarousel(
+      {super.key, required this.onPageChanged, required this.onImageTaps});
 
   @override
   Widget build(BuildContext context) {
@@ -127,7 +132,8 @@ class ImageCarousel extends StatelessWidget {
       itemBuilder: (context, index, realIndex) {
         final imgUrl = imgList[index];
         return GestureDetector(
-          onTap: onImageTaps[index], // Chama o callback específico para a imagem
+          onTap:
+              onImageTaps[index], // Chama o callback específico para a imagem
           child: Container(
             margin: const EdgeInsets.symmetric(horizontal: 8.0),
             decoration: BoxDecoration(
@@ -144,7 +150,8 @@ class ImageCarousel extends StatelessWidget {
         );
       },
       options: CarouselOptions(
-        height: double.infinity, // Usa altura infinita para ocupar espaço disponível
+        height: double
+            .infinity, // Usa altura infinita para ocupar espaço disponível
         enlargeCenterPage: true,
         viewportFraction: 1.0,
         aspectRatio: 16 / 9,

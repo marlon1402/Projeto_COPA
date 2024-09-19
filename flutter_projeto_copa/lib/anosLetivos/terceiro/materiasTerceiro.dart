@@ -27,7 +27,7 @@ class _TextoterceiroState extends State<Textoterceiro> {
         backgroundColor: const Color.fromARGB(255, 140, 82, 255),
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.pushNamed(context, 'iniciar');
           },
           icon: const Icon(
             Icons.arrow_back,
@@ -40,32 +40,45 @@ class _TextoterceiroState extends State<Textoterceiro> {
         color: const Color.fromARGB(255, 25, 7, 63),
         child: ListView(
           children: [
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, 'mobile');
               },
-              child: Image.asset('assets/images/3ano/Mobile.png', width: 250,),
+              child: Image.asset(
+                'assets/images/3ano/Mobile.png',
+                width: 250,
+              ),
             ),
             GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, 'arduino');
               },
-              child: Image.asset('assets/images/3ano/Arduino.png', width: 250,),
+              child: Image.asset(
+                'assets/images/3ano/Arduino.png',
+                width: 250,
+              ),
             ),
             GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, 'topicos');
               },
-              child: Image.asset('assets/images/3ano/TTI.png', width: 250,),
+              child: Image.asset(
+                'assets/images/3ano/TTI.png',
+                width: 250,
+              ),
             ),
             GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, 'projeto2');
               },
-              child: Image.asset('assets/images/3ano/PI2.png', width: 250,),
+              child: Image.asset(
+                'assets/images/3ano/PI2.png',
+                width: 250,
+              ),
             ),
-
           ],
         ),
       ),
