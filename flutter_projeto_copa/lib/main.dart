@@ -21,6 +21,12 @@ import 'package:flutter_projeto_copa/anosLetivos/segundo/inova/inovacao.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/java/multiplataforma.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/web2/web.dart';
 import 'package:flutter_projeto_copa/anosLetivos/terceiro/Arduino/Arduino.dart';
+import 'package:flutter_projeto_copa/anosLetivos/terceiro/Arduino/exercicios_Arduino/quizArduino1.dart';
+import 'package:flutter_projeto_copa/anosLetivos/terceiro/Arduino/exercicios_Arduino/quizArduino2.dart';
+import 'package:flutter_projeto_copa/anosLetivos/terceiro/Arduino/exercicios_Arduino/quizArduino3.dart';
+import 'package:flutter_projeto_copa/anosLetivos/terceiro/Mobile/exercicios_Mobile/quizMobile1.dart';
+import 'package:flutter_projeto_copa/anosLetivos/terceiro/Mobile/exercicios_Mobile/quizMobile2.dart';
+import 'package:flutter_projeto_copa/anosLetivos/terceiro/Mobile/exercicios_Mobile/quizMobile3.dart';
 import 'package:flutter_projeto_copa/creditos.dart';
 import 'package:flutter_projeto_copa/anosLetivos/primeiro/materiasPrimeiro.dart';
 import 'package:flutter_projeto_copa/anosLetivos/segundo/materiasSegundo.dart';
@@ -50,24 +56,9 @@ class MyApp extends StatelessWidget {
         '/': (context) => HomePage(),
         'creditos': (context) => Creditos(),
         'iniciar': (context) => Myiniciar(),
-        'textoPrimeiro': (context) => Textoprimeiro(),
-        'textoSegundo': (context) => Textosegundo(),
-
-        //terceiro ano
-        'textoTerceiro': (context) => Textoterceiro(),
-        'mobile': (context) => mobileText(),
-        'arduino': (context) => arduinoText(),
-        'topicos': (context) => TopicosText(),
-        'projeto2': (context) => ProjetoDoisText(),
-
-        //segundo
-        'desk': (context) => Mydesk(),
-        'inova': (context) => Myinova(),
-        'java': (context) => Myjava(),
-        'pi': (context) => Myintegrador(),
-        'web2': (context) => MYweb2(),
 
         //primeiro ano
+        'textoPrimeiro': (context) => Textoprimeiro(),
         'BD': (context) => BD(),
         'Informatica': (context) => Informatica(),
         'LP': (context) => LP(),
@@ -82,6 +73,28 @@ class MyApp extends StatelessWidget {
         'QuizLP1': (context) => QuizLP1(),
         'QuizLP2': (context) => QuizLP2(),
         'QuizLP3': (context) => QuizLP3(),
+
+        //segundo
+        'textoSegundo': (context) => Textosegundo(),
+        'desk': (context) => Mydesk(),
+        'inova': (context) => Myinova(),
+        'java': (context) => Myjava(),
+        'pi': (context) => Myintegrador(),
+        'web2': (context) => MYweb2(),
+
+        //terceiro ano
+        'textoTerceiro': (context) => Textoterceiro(),
+        'mobile': (context) => mobileText(),
+        'arduino': (context) => arduinoText(),
+        'topicos': (context) => TopicosText(),
+        'projeto2': (context) => ProjetoDoisText(),
+        'QuizArd1': (context) => QuizArd1(),
+        'QuizArd2': (context) => QuizArd2(),
+        'QuizArd3': (context) => QuizArd3(),
+        'QuizMob1': (context) => QuizMob1(),
+        'QuizMob2': (context) => QuizMob2(),
+        'QuizMob3': (context) => QuizMob3(),
+
       },
     );
   }

@@ -47,7 +47,7 @@ class _mobileTextState extends State<mobileText> {
           children: [
             GestureDetector(
               onTap: () {
-                
+                Navigator.pushNamed(context, 'QuizMob1');
               },
               child: Image.asset(
               'assets/images/3ano/Materias_Mobile.png',

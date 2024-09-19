@@ -47,7 +47,7 @@ class _arduinoTextState extends State<arduinoText> {
           children: [
             GestureDetector(
               onTap: () {
-                
+                Navigator.pushNamed(context, 'QuizArd1');
               },
               child: Image.asset(
               'assets/images/3ano/Materias_Arduino.png',
