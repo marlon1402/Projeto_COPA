@@ -48,8 +48,8 @@ Cada seção pode incluir exercícios interativos relacionados às matérias, pe
 <p>Esse projeto foi criado pelos alunos de Desenvolvimento de Sistemas do Colégio Técnico de Limera (COTIL).</p>
 
 <h3>Marlon Samuel: <code>https://github.com/marlon1402</code></h3>
-<h3>Kaue Beckmann: <code>https://github.com/EduardoRPortela</code></h3>
-<h3>Eduardo Portela: <code>https://github.com/KaueBeckmann</code></h3>
+<h3>Eduardo Portela: <code>https://github.com/EduardoRPortela</code></h3>
+<h3>Kaue Beckmann: <code>https://github.com/KaueBeckmann</code></h3>
 
 </body>
 </html>
